@@ -1,5 +1,5 @@
 from itertools import islice,takewhile
-from hafta4 import fibonacci
+from fibonacci import fibonacci
 
 def test_fibonacci():
     g = fibonacci()
