@@ -1,4 +1,5 @@
 def satirlari_oku(yol):
+    """Dosyadaki satirlari bosluk ve yorumlari eleyerek uretir."""
     with open(yol,"r",encoding="utf-8") as dosya:
         for satir in dosya :
             temiz = satir.strip()
@@ -7,6 +8,7 @@ def satirlari_oku(yol):
             yield temiz
 
 def ayristir(satirlar):
+    """Metin satirlarini kaynak, hedef ve yakit demeti olarak uretir."""
     for satir in satirlar :
         kaynak, sag = satir.split("->")
         kaynak = kaynak.strip()
@@ -15,6 +17,7 @@ def ayristir(satirlar):
         yield (kaynak,hedef,int(yakit))
 
 def uzun_yolculuklar(kayitlar,esik):
+    """Esik degerinden buyuk olan yakit seferlerini suzer."""
     for kaynak,hedef,yakit in kayitlar:
         if yakit > esik :
             yield (kaynak,hedef,yakit)

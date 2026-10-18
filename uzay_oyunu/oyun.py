@@ -70,6 +70,7 @@ def travel(
         try :
             next(gosterge)
         except StopIteration:
+            print("Yakıtın bitti, uzayda sürükleniyorsun...")
             return None
 
     envanter = envanter_metni(credits, engines, copilot)
