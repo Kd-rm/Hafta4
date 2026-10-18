@@ -1,6 +1,7 @@
 from itertools import islice,takewhile
 
 def fibonacci():
+    """Sonsuz Fibonacci sayilarini tek tek uretir."""
     a,b = 0,1
 
     while True:
